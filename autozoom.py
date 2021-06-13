@@ -37,22 +37,16 @@ weekday=datetime.datetime.now().weekday()
 today=str(datetime.datetime.now().date())
 reversing_today = [x for x in today.split('-')][::-1]
 today = "-".join(reversing_today)
-print(weekday,today)
-#zoom('google.com','18-05-2021','18-10-00')
-ai = "https://iare-ac-in.zoom.us/j/92836158713?pwd=NnZTZkVremRvd0pLUGNpdTZqZ1M1UT09"
-lp = "https://iare-ac-in.zoom.us/j/98425928051?pwd=OFl4Qk1rVzBQZnZMNnRZTTJLeG0rQT09"
-adb = "https://iare-ac-in.zoom.us/meeting/register/tJEkd-upqTsrEtFCM3ozv9UlLCYYwBf3Zq16"
-iot = "https://iare-ac-in.zoom.us/j/95945210804?pwd=TjJhVFJ2NFprVzRnWElKeVh0aktPQT09"
-dmdw = "https://iare-ac-in.zoom.us/j/96924410873?pwd=QmF2a2xWSXAyWjFtUFhvaVYyUUR0UT09"
-sc = "https://iare-ac-in.zoom.us/j/99029418973?pwd=dHo5YWxYNXVjS1pXcmY2RFVadVZOUT09"
-ss = "https://iare-ac-in.zoom.us/j/95189208348?pwd=Vi9sUXlIVFNkVnBIcEYxV21FeXdZdz09"
-time_table = [[ai, lp, adb],
-              [lp, ai, iot],
-              [dmdw, ai, lp],
-              [dmdw, iot, sc],
-              [ss, dmdw,iot],
-              [sc, ss, adb]]
-zoom(time_table[weekday][0],today,"13-35-00")
-zoom(time_table[weekday][1],today,"14-25-00")
-zoom(time_table[weekday][2],today,"15-15-00")
+
+# To schedule a meeting, use the below mentioned format -
+
+zoom(link, date, time)
+
+''' where -
+        link : meeting link
+        date : the date you want to schedule the meeting to join
+        time : the time you want to join the meeting
+        
+Example : zoom("www.google.com","13-06-2021","13-35-00")'''
+
 
